@@ -92,9 +92,10 @@ img.flag {
 }
 
 .back-to-menu {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 10px 15px;
     background-color: #f0f0f0;
     border: 1px solid #333;
@@ -102,6 +103,7 @@ img.flag {
     text-decoration: none;
     color: #333;
     font-family: Trebuchet MS;
+    cursor: pointer;
 }
 
 .back-to-menu:hover {
