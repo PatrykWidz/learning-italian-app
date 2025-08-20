@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Learning Italian - Menu</title>
+</head>
+<body>
+    <h1>Learning Italian - Menu</h1>
+    <nav class="menu">
+        <h2>Games</h2>
+        <ul>
+            <li><a href="{{ url_for('vocabulary_test', game_mode='random', word_count=10) }}">Vocabulary Test (Random 10 words)</a></li>
+            <li><a href="{{ url_for('flash_card_game', game_mode='random', game_difficulty='easy') }}">Flash Card Game (Easy)</a></li>
+        </ul>
+        <h2>Admin</h2>
+        <ul>
+            <li><a href="{{ url_for('import_words') }}">Import Words</a></li>
+            <li><a href="{{ url_for('show_dictionary') }}">Show Dictionary</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

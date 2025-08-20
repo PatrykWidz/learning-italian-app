@@ -69,7 +69,7 @@ def get_word_list_for_game(game_mode, word_count):
 #   Define a simple route
 @app.route("/")
 def home():
-    return "Flask App with MySQL is Running!"
+    return render_template("menu.html")
 
 @app.route("/show-dictionary")
 def show_dictionary():
