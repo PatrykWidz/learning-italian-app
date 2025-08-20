@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{{ url_for('home') }}" class="back-to-menu">Back to Menu</a>
     <div class="main">
         <div class="flash-card-game-wrapper">
             <div class="flash-card-game-main" style="grid-template-columns:repeat({{ x_dimension }}, 1fr); grid-template-rows:repeat({{ y_dimension }}, 1fr)">
@@ -26,6 +27,5 @@
             </div>
         </div>
     </div>
-    <a href="{{ url_for('home') }}">Back to Menu</a>
 </body>
 </html>

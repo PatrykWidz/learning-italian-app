@@ -8,6 +8,7 @@
     <title>Italian vocabulary test</title>
 </head>
 <body>
+    <a href="{{ url_for('home') }}" class="back-to-menu">Back to Menu</a>
     <div class="vocabulary-test main">
         <div class="result-column correct"></div>
         <div class="game-field">
@@ -24,6 +25,5 @@
             <span class="test-word" data-id="{{ word.id }}" data-italian="{{ word.italian }}">{{ word.english }}</span>
         {% endfor %}
     </div>
-    <a href="{{ url_for('home') }}">Back to Menu</a>
 </body>
 </html>
