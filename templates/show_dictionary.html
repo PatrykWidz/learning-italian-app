@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="main">
+        <table class="dictionary-table">
+            <thead>
+                <tr>
+                    <th>Word No.</th>
+                    <th>English</th>
+                    <th>Italian</th>
+                    <th>Last Practiced</th>
+                    <th>Practiced Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word in word_list %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ word.english }}</td>
+                    <td>{{ word.italian }}</td>
+                    <td>{{ word.practice_history.last_practiced_on if word.practice_history else '' }}</td>
+                    <td>{{ word.practice_history.practiced_counter if word.practice_history else 0 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <button class="back-to-menu" onclick="window.location.href='{{ url_for('home') }}'">Back to Menu</button>
+</body>
+</html>
+
