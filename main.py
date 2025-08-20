@@ -106,12 +106,7 @@ def show_dictionary():
     dict_repo = DictionaryRepository(Session())
     word_list = dict_repo.get_all_words()
 
-    words = ""
-
-    for word in word_list:
-        words += ( str(word) + "\n" )
-
-    return words
+    return render_template("show_dictionary.html", word_list=word_list)
 
 @app.route("/vocabulary-test/<string:game_mode>/<int:word_count>")
 def vocabulary_test(game_mode, word_count):

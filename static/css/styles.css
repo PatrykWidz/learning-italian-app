@@ -109,3 +109,20 @@ img.flag {
 .back-to-menu:hover {
     background-color: #e0e0e0;
 }
+
+.dictionary-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Trebuchet MS;
+}
+
+.dictionary-table th,
+.dictionary-table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+.dictionary-table th {
+    background-color: #f0f0f0;
+}
