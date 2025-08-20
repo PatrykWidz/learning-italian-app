@@ -3,7 +3,7 @@ import pandas
 import logging
 logging.basicConfig(level=logging.INFO)
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv
 from db.connection import Session, init_db
 from repo.dictionary_crud import DictionaryRepository
@@ -16,6 +16,12 @@ FLASH_CARD_GAME_DIFFICULTY_SETTINGS = {
     "easy": {"x": 4, "y": 3},
     "medium": {"x": 5, "y": 4},
     "hard": {"x": 6, "y": 5}
+}
+
+VOCABULARY_TEST_DIFFICULTY_SETTINGS = {
+    "easy": 10,
+    "medium": 20,
+    "hard": 30,
 }
 
 #FLASH_CARD_GAME_SETTINGS = {
@@ -65,6 +71,35 @@ def get_word_list_for_game(game_mode, word_count):
 @app.route("/")
 def home():
     return render_template("menu.html")
+
+
+@app.route("/vocabulary-test-options", methods=["GET", "POST"])
+def vocabulary_test_options():
+    if request.method == "POST":
+        mode = request.form.get("mode")
+        difficulty = request.form.get("difficulty")
+        word_count = VOCABULARY_TEST_DIFFICULTY_SETTINGS[difficulty]
+        return redirect(url_for("vocabulary_test", game_mode=mode, word_count=word_count))
+    return render_template(
+        "vocabulary_test_options.html",
+        game_modes=game_modes,
+        difficulties=VOCABULARY_TEST_DIFFICULTY_SETTINGS.keys(),
+    )
+
+
+@app.route("/flash-card-options", methods=["GET", "POST"])
+def flash_card_options():
+    if request.method == "POST":
+        mode = request.form.get("mode")
+        difficulty = request.form.get("difficulty")
+        return redirect(
+            url_for("flash_card_game", game_mode=mode, game_difficulty=difficulty)
+        )
+    return render_template(
+        "flash_card_options.html",
+        game_modes=game_modes,
+        difficulties=FLASH_CARD_GAME_DIFFICULTY_SETTINGS.keys(),
+    )
 
 @app.route("/show-dictionary")
 def show_dictionary():
