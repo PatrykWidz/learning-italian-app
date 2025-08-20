@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta12
+kind: Config
+metadata:
+  name: learning-italian
+build:
+  artifacts:
+    - image: learning-italian
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - kubernetes/app-deployment.yaml

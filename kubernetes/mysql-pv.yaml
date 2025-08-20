@@ -1,0 +1,28 @@
+# MySQL persistence volume definition
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 500M
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/Users/pwidz/patollo/database"
+---
+#MySQL database persistence volume claim definition
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500M

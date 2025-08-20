@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learning-italian-deployment
+  labels:
+    app: learning-italian
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learning-italian
+  template:
+    metadata:
+      labels:
+        app: learning-italian
+    spec:
+      containers:
+      - name: learning-italian-container
+        image: learning-italian:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: learning-italian-service
+  labels:
+    app: learning-italian
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app: learning-italian

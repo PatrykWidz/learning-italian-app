@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/vocabulary-test.js') }}"></script>
+    <title>Italian vocabulary test</title>
+</head>
+<body>
+    <div class="vocabulary-test main">
+        <div class="result-column correct"></div>
+        <div class="game-field">
+            <div class="test-word-container"></div>
+            <div class="test-word-answer-container">
+                <input type="text" id="test-answer" name="test-answer">
+            </div>
+            <button>Test</button>
+        </div>
+        <div class="result-column wrong"></div>
+    </div>
+    <div class="vocabulary-test-word-list" style="display: none">
+        {% for word in word_list %}
+            <span class="test-word" data-id="{{ word.id }}" data-italian="{{ word.italian }}">{{ word.english }}</span>
+        {% endfor %}
+    </div>
+</body>
+</html>
