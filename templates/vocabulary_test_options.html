@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Vocabulary Test Options</title>
+</head>
+<body>
+    <h1>Vocabulary Test - Options</h1>
+    <form method="post">
+        <label for="mode">Mode:</label>
+        <select id="mode" name="mode">
+            {% for mode in game_modes %}
+            <option value="{{ mode }}">{{ mode }}</option>
+            {% endfor %}
+        </select>
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty">
+            {% for diff in difficulties %}
+            <option value="{{ diff }}">{{ diff }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Start</button>
+    </form>
+    <a href="{{ url_for('home') }}">Back to Menu</a>
+</body>
+</html>
+
