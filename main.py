@@ -18,11 +18,6 @@ FLASH_CARD_GAME_DIFFICULTY_SETTINGS = {
     "hard": {"x": 6, "y": 5}
 }
 
-for difficulty in FLASH_CARD_GAME_DIFFICULTY_SETTINGS:
-    difficulty["word_count"] = ( difficulty.get("x") * difficulty.get("y") ) // 2
-
-logging.INFO(FLASH_CARD_GAME_DIFFICULTY_SETTINGS)
-
 #FLASH_CARD_GAME_SETTINGS = {
 #    "easy": {"word_count": 6, "x": 4, "y": 3},
 #    "medium": {"word_count": 10, "x": 5, "y": 4},
@@ -95,9 +90,10 @@ def vocabulary_test(game_mode, word_count):
 @app.route("/flash-card-game/<string:game_mode>/<string:game_difficulty>")
 def flash_card_game(game_mode, game_difficulty):
 
-    word_count = FLASH_CARD_GAME_DIFFICULTY_SETTINGS[game_difficulty]["word_count"]
     x_dimension =  FLASH_CARD_GAME_DIFFICULTY_SETTINGS[game_difficulty]["x"]
     y_dimension = FLASH_CARD_GAME_DIFFICULTY_SETTINGS[game_difficulty]["y"]
+
+    word_count = x_dimension * y_dimension // 2
 
     words_in_game = get_word_list_for_game(game_mode, word_count)
 
