@@ -15,6 +15,9 @@ class Dictionary(Base):
     # Column for the Italian translation
     italian = Column(String(50), nullable=False)
 
+    #Column for the Italian article
+    italian_article = Column(String(5), nullable=True)
+
     # Column for the word classy
     word_class = Column(String(50), nullable=False)
 

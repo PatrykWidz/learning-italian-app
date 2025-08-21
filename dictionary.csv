@@ -1,51 +1,156 @@
-english,italian,word_class
-english,italian,word_class
-to arrive,arrivare,verb
-to buy,comprare,verb
-to wish,desiderare,verb
-to want,desiderare,verb
-to ask,domandare,verb
-to sleep,dormire,verb
-to watch,guardare,verb
-to look (at),guardare,verb
-to meet,incontrare,verb
-to encounter,incontrare,verb
-to read,leggere,verb
-to speak,parlare,verb
-to talk,parlare,verb
-to leave,partire,verb
-to receive,ricevere,verb
-to remember,ricordare,verb
-to greet,salutare,verb
-to say goodbye,salutare,verb
-to write,scrivere,verb
-to see,vedere,verb
-tall,alto,adjective
-American,americano,adjective
-short,basso,adjective
-blond,biondo,adjective
-dark-haired,bruno,adjective
-hot,caldo,adjective
-warm,caldo,adjective
-Canadian,canadese,adjective
-difficult,difficile,adjective
-amusing,divertente,adjective
-easy,facile,adjective
-strong,forte,adjective
-loud,forte,adjective
-yellow,giallo,adjective
-Japanese,giapponese,adjective
-fat,grasso,adjective
-French,francese,adjective
-fried,fritto,adjective
-English,inglese,adjective
-interesting,interessante,adjective
-intelligent,intelligente,adjective
-Italian,italiano,adjective
-thin,magro,adjective
-slender,magro,adjective
-mineral,minerale,adjective
-black,nero,adjective
-Protestant,protestante,adjective
-red,rosso,adjective
-Spanish,spagnolo,adjective
+english,italian,italian_article,word_class
+airplane,aeroplano,l',noun
+year,anno,l',noun
+bus,autobus,l',noun
+automobile,automobile,l',noun
+car,automobile,l',noun
+child,bambina,la,noun
+little girl,bambina,la,noun
+child,bambino,il,noun
+little boy,bambino,il,noun
+bar,bar,il,noun
+purse,borsa,la,noun
+coffee,caffè,il,noun
+café,caffè,il,noun
+house,casa,la,noun
+home,casa,la,noun
+city,città,la,noun
+town,città,la,noun
+class,classe,la,noun
+doctor,dottore,il,noun
+physician,dottore,il,noun
+film,film,il,noun
+movie,film,il,noun
+day,giorno,il,noun
+hotel,hotel,l',noun
+lesson,lezione,la,noun
+book,libro,il,noun
+mother,madre,la,noun
+pencil,matita,la,noun
+noun,nome,il,noun
+name,nome,il,noun
+night,notte,la,noun
+father,padre,il,noun
+pen,penna,la,noun
+plate,piatto,il,noun
+dish of food,piatto,il,noun
+square,piazza,la,noun
+professor,professore,il,noun
+professor,professoressa,la,noun
+notebook,quaderno,il,noun
+girl,ragazza,la,noun
+boy,ragazzo,il,noun
+restaurant,ristorante,il,noun
+evening,sera,la,noun
+week,settimana,la,noun
+lady,signora,la,noun
+married woman,signora,la,noun
+ma’am,signora,la,noun
+Mrs.,signora,la,noun
+man,signore,il,noun
+gentleman,signore,il,noun
+sir,signore,il,noun
+Mr.,signore,il,noun
+young lady,signorina,la,noun
+unmarried woman,signorina,la,noun
+Miss,signorina,la,noun
+sport,sport,lo,noun
+room,stanza,la,noun
+station,stazione,la,noun
+student,studente,lo,noun
+student,studentessa,la,noun
+taxi,tassi,il,noun
+cab,tassi,il,noun
+train,treno,il,noun
+university,università,l',noun
+vacation,vacanza,la,noun
+holiday,vacanza,la,noun
+street,via,la,noun
+road,via,la,noun
+wine,vino,il,noun
+virtue,virtù,la,noun
+sugar,zucchero,lo,noun
+water,acqua,l',noun
+appetite,appetito,l',noun
+roast,arrosto,l',noun
+glass,bicchiere,il,noun
+bottle,bottiglia,la,noun
+waiter,cameriere,il,noun
+cappuccino,cappuccino,il,noun
+center,centro,il,noun
+downtown,centro,il,noun
+check,conto,il,noun
+account,conto,il,noun
+side dish,contorno,il,noun
+dessert,dolce,il,noun
+sweet,dolce,il,noun
+espresso,espresso,l',noun
+hunger,fame,la,noun
+cheese,formaggio,il,noun
+fruit,frutta,la,noun
+ice cream,gelato,il,noun
+salad,insalata,l',noun
+lettuce,insalata,l',noun
+liter,litro,il,noun
+soup,minestra,la,noun
+word,parola,la,noun
+pastry,pasta,la,noun
+pasta,pasta,la,noun
+potato,patata,la,noun
+pleasure,piacere,il,noun
+tomato,pomodoro,il,noun
+thirst,sete,la,noun
+type of pasta,spaghetti,gli,noun
+sparkling wine,spumante,lo,noun
+vegetables,verdura,la,noun
+veal,vitello,il,noun
+to arrive,arrivare,,verb
+to buy,comprare,,verb
+to wish,desiderare,,verb
+to want,desiderare,,verb
+to ask,domandare,,verb
+to sleep,dormire,,verb
+to watch,guardare,,verb
+to look (at),guardare,,verb
+to meet,incontrare,,verb
+to encounter,incontrare,,verb
+to read,leggere,,verb
+to speak,parlare,,verb
+to talk,parlare,,verb
+to leave,partire,,verb
+to receive,ricevere,,verb
+to remember,ricordare,,verb
+to greet,salutare,,verb
+to say goodbye,salutare,,verb
+to write,scrivere,,verb
+to see,vedere,,verb
+verb,verbo,il,noun
+tall,alto,,adjective
+American,americano,,adjective
+short,basso,,adjective
+blond,biondo,,adjective
+dark-haired,bruno,,adjective
+hot,caldo,,adjective
+warm,caldo,,adjective
+Canadian,canadese,,adjective
+difficult,difficile,,adjective
+amusing,divertente,,adjective
+easy,facile,,adjective
+strong,forte,,adjective
+loud,forte,,adjective
+yellow,giallo,,adjective
+Japanese,giapponese,,adjective
+fat,grasso,,adjective
+French,francese,,adjective
+fried,fritto,,adjective
+English,inglese,,adjective
+interesting,interessante,,adjective
+intelligent,intelligente,,adjective
+Italian,italiano,,adjective
+thin,magro,,adjective
+slender,magro,,adjective
+mineral,minerale,,adjective
+black,nero,,adjective
+Protestant,protestante,,adjective
+red,rosso,,adjective
+Spanish,spagnolo,,adjective

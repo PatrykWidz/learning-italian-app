@@ -148,7 +148,10 @@ def flash_card_game(game_mode, game_difficulty):
         card_english = {'id': id_list, 'content': word.english, 'language': 'english'}
 
         #prep cards with italian words
-        card_italian = {'id': id_list, 'content': word.italian, 'language': 'italian'}
+
+        italian_word_content = word.italian_article + word.italian if word.italian_article == "l'" else word.italian_article + " " + word.italian
+
+        card_italian = {'id': id_list, 'content': italian_word_content, 'language': 'italian'}
 
         #add both types of cards to the card list
         cards.append(card_english)
@@ -163,7 +166,7 @@ def flash_card_game(game_mode, game_difficulty):
 def import_words():
 
     #Import the words from the CSV file to a Pandas DataFrame
-    imported_words_df = pandas.read_csv("dictionary.csv")
+    imported_words_df = pandas.read_csv("dictionary.csv", keep_default_na=False)
 
     #Create a list of dictionaries
     word_list = imported_words_df.to_dict(orient="records")

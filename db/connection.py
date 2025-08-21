@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 mysql_port = 3306
 mysql_user = 'root'
 mysql_password = 'password'
-mysql_host = '10.98.247.156'
+mysql_host = '10.106.154.84'
 mysql_database = 'learning_italian'
 
 # Database URL format: 'mysql+mysqlconnector://username:password@localhost:3306/yourdatabase'

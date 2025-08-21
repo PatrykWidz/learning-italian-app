@@ -23,7 +23,18 @@
                 <tr>
                     <td>{{ loop.index }}</td>
                     <td>{{ word.english }}</td>
-                    <td>{{ word.italian }}</td>
+
+                    {% if word.italian_article == "l'" %}
+
+                        <td>{{word.italian_article}}{{ word.italian }}</td>
+
+                    {% else %}
+
+                        <td>{{word.italian_article}} {{ word.italian }}</td>
+
+                    {% endif %}
+
+
                     <td>{{ word.practice_history.last_practiced_on if word.practice_history else '' }}</td>
                     <td>{{ word.practice_history.practiced_counter if word.practice_history else 0 }}</td>
                 </tr>
