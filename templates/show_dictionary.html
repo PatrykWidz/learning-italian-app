@@ -12,10 +12,10 @@
             <thead>
                 <tr>
                     <th>Word No.</th>
-                    <th>English</th>
-                    <th>Italian</th>
-                    <th>Last Practiced</th>
-                    <th>Practiced Count</th>
+                    <th data-type="string">English</th>
+                    <th data-type="string">Italian</th>
+                    <th data-type="date">Last Practiced</th>
+                    <th data-type="number">Practiced Count</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +43,7 @@
         </table>
     </div>
     <button class="back-to-menu" onclick="window.location.href='{{ url_for('home') }}'">Back to Menu</button>
+    <script src="{{ url_for('static', filename='js/dictionary.js') }}"></script>
 </body>
 </html>
 
