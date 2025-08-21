@@ -1,3 +1,8 @@
+body {
+    font-family: Trebuchet MS;
+    margin: 0;
+}
+
 .flash-card-game-wrapper {
     display: flex;
     justify-content: center; /* center horizontally */
@@ -66,29 +71,38 @@ img.flag {
     width: 50%;
 }
 
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    font-family: Trebuchet MS;
 }
 
-.menu ul {
-    list-style-type: none;
-    padding: 0;
+.menu button {
+    padding: 10px 20px;
+    background-color: #D0D4CA;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.menu li {
-    margin: 5px 0;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.menu a:hover {
-    text-decoration: underline;
+.menu button:hover {
+    background-color: #A7D397;
 }
 
 .back-to-menu {
