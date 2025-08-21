@@ -7,18 +7,20 @@
     <title>Learning Italian - Menu</title>
 </head>
 <body>
-    <h1>Learning Italian - Menu</h1>
-    <nav class="menu">
-        <h2>Games</h2>
-        <ul>
-            <li><a href="{{ url_for('vocabulary_test_options') }}">Vocabulary Test</a></li>
-            <li><a href="{{ url_for('flash_card_options') }}">Flash Card Game</a></li>
-        </ul>
-        <h2>Admin</h2>
-        <ul>
-            <li><a href="{{ url_for('import_words') }}">Import Words</a></li>
-            <li><a href="{{ url_for('show_dictionary') }}">Show Dictionary</a></li>
-        </ul>
-    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu">
+            <h1>Learning Italian</h1>
+            <div class="section">
+                <h2>Games</h2>
+                <button onclick="window.location.href='{{ url_for('vocabulary_test_options') }}'">Vocabulary Test</button>
+                <button onclick="window.location.href='{{ url_for('flash_card_options') }}'">Flash Card Game</button>
+            </div>
+            <div class="section">
+                <h2>Admin</h2>
+                <button onclick="window.location.href='{{ url_for('import_words') }}'">Import Words</button>
+                <button onclick="window.location.href='{{ url_for('show_dictionary') }}'">Show Dictionary</button>
+            </div>
+        </nav>
+    </div>
 </body>
 </html>
