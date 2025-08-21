@@ -90,6 +90,17 @@ img.flag {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.menu .section:nth-of-type(odd) {
+    background: linear-gradient(135deg, #D0D4CA, #F5F5F0);
+}
+
+.menu .section:nth-of-type(even) {
+    background: linear-gradient(135deg, #A7D397, #D0D4CA);
 }
 
 .menu button {
